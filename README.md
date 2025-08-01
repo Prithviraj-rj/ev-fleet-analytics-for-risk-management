@@ -48,8 +48,7 @@ Focusing on nighttime activity (12 AM - 5 AM), I used the DBSCAN clustering algo
 
 ### Phase 2: Charging Location Analysis
 A two-pass system was engineered to identify charging events based on positive battery charge deltas. High-confidence locations were identified from significant charge increases (>5%), while a lower threshold was used to find secondary locations for the remaining vehicles.
-
-<img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/14c19e6e-ff69-4ffb-98c8-4aa2cf45c58b" />
+<img width="400" height="873" alt="image" src="https://github.com/user-attachments/assets/76ae64b6-341c-4e32-ba3b-044179a5a140" />
 <img width="420" height="600" alt="image" src="https://github.com/user-attachments/assets/9d64d27a-86c9-4968-9d25-42a4fafbff53" />
 
 
