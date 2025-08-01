@@ -37,6 +37,7 @@ This foundational phase ensured the integrity and reliability of all subsequent 
 *   **Outlier Removal:** Filtering out invalid GPS coordinates and data points outside the client's core operational area (India).
 *   **Anomaly Detection:** Programmatically flagging impossible speed-based "jumps" between data points and physically improbable battery level changes using domain-specific rules.
 *   **Time-Series Imputation:** Leveraging interpolation and fill-forward/backward logic on a per-vehicle basis to repair the flagged data points, creating a clean, complete dataset ready for analysis.
+
 <img width="500" height="700" alt="image" src="https://github.com/user-attachments/assets/f05876f2-ff00-43a4-9fb5-a71f20aec606" />
 <img width="493" height="700" alt="image" src="https://github.com/user-attachments/assets/3cd5f324-d293-4ff7-8d4f-9e391eedbb8b" />
 
@@ -47,6 +48,7 @@ Focusing on nighttime activity (12 AM - 5 AM), I used the DBSCAN clustering algo
 
 ### Phase 2: Charging Location Analysis
 A two-pass system was engineered to identify charging events based on positive battery charge deltas. High-confidence locations were identified from significant charge increases (>5%), while a lower threshold was used to find secondary locations for the remaining vehicles.
+
 <img width="500" height="600" alt="image" src="https://github.com/user-attachments/assets/14c19e6e-ff69-4ffb-98c8-4aa2cf45c58b" />
 <img width="420" height="600" alt="image" src="https://github.com/user-attachments/assets/9d64d27a-86c9-4968-9d25-42a4fafbff53" />
 
@@ -54,10 +56,12 @@ A two-pass system was engineered to identify charging events based on positive b
 
 ### Phase 3: Driver Risk Assessment Model
 To create a proxy for driver earnings and stability, I engineered a feature for the average daily distance traveled. A Z-score was then calculated for each driver against the fleet average. Drivers with a score below a -1.5 threshold were automatically categorized as "High Risk," providing an early warning system for the risk management team.
+
 <img width="793" height="280" alt="image" src="https://github.com/user-attachments/assets/28750421-904a-47ce-b8b1-4d2c0ff4193f" />
 
 ### Phase 4: Business Hotspot Discovery
 To prevent bias from parked vehicles, the data was first transformed into a "unique daily visits" log. The DBSCAN algorithm was then applied to this log to discover and map high-traffic commercial zones, defined as areas with over 50 unique vehicle visits within a 500m radius.
+
 <img width="413" height="558" alt="image" src="https://github.com/user-attachments/assets/364f099c-45f3-4335-b232-d4286922291a" />
 <img width="520" height="504" alt="image" src="https://github.com/user-attachments/assets/31a2314b-e353-4496-a33f-95d8538bd4f7" />
 
