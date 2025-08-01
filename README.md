@@ -48,10 +48,9 @@ Focusing on nighttime activity (12 AM - 5 AM), I used the DBSCAN clustering algo
 
 ### Phase 2: Charging Location Analysis
 A two-pass system was engineered to identify charging events based on positive battery charge deltas. High-confidence locations were identified from significant charge increases (>5%), while a lower threshold was used to find secondary locations for the remaining vehicles.
+
 <img width="400" height="873" alt="image" src="https://github.com/user-attachments/assets/76ae64b6-341c-4e32-ba3b-044179a5a140" />
 <img width="420" height="600" alt="image" src="https://github.com/user-attachments/assets/9d64d27a-86c9-4968-9d25-42a4fafbff53" />
-
-
 
 ### Phase 3: Driver Risk Assessment Model
 To create a proxy for driver earnings and stability, I engineered a feature for the average daily distance traveled. A Z-score was then calculated for each driver against the fleet average. Drivers with a score below a -1.5 threshold were automatically categorized as "High Risk," providing an early warning system for the risk management team.
